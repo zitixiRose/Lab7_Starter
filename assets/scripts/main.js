@@ -77,13 +77,13 @@ async function getRecipes() {
   // The rest of this method will be concerned with requesting the recipes
   // from the network
   // A2. TODO - Create an empty array to hold the recipes that you will fetch
-  let recipeArr = [];
+  const recipeArr = [];
   // A3. TODO - Return a new Promise. If you are unfamiliar with promises, MDN
   //            has a great article on them. A promise takes one parameter - A
   //            function (we call these callback functions). That function will
   //            take two parameters - resolve, and reject. These are functions
   //            you can call to either resolve the Promise or Reject it.
-  let promise = new Promise(async(resolve, reject) => {
+  return new Promise(async(resolve, reject) => {
     for(let i = 0; i < RECIPE_URLS.length; i++) { //A4
       try{ //A5
         const response = await fetch(RECIPE_URLS[i]); //A6
