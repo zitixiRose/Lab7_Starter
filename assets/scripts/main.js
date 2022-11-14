@@ -90,7 +90,7 @@ async function getRecipes() {
         let recipe = await response.json(); //A7
         recipeArr.push(recipe); // A8
         if(i === RECIPE_URLS.length - 1) { //A9
-          saveRecipesToStorage(recipe);
+          saveRecipesToStorage(recipeArr);
           resolve(recipeArr);
         }
       }
